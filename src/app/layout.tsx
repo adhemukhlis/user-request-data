@@ -1,18 +1,19 @@
-import type { Metadata } from 'next';
 import '@/app/globals.css'
+
+import type { Metadata } from 'next'
+import type { FC } from 'react'
+
 export const metadata: Metadata = {
 	title: 'User Request Data',
 	description: 'identify user data',
-};
+}
 
-export default function RootLayout({
-	children,
-}: Readonly<{
-	children: React.ReactNode;
-}>) {
+const RootLayout: FC = ({ children }) => {
 	return (
 		<html lang="en">
 			<body>{children}</body>
 		</html>
-	);
+	)
 }
+
+export default RootLayout
