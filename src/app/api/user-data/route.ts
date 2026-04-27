@@ -14,7 +14,7 @@ export const GET = (request: Request) => {
 		continent,
 		country,
 		region,
-		city,
+		city: decodeURIComponent(city || ''),
 		latitude,
 		longitude,
 		timezone,
